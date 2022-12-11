@@ -55,6 +55,11 @@ class Korova(Travoyad):
     def __init__(self, age, colorGreen, roga):
         super().__init__(age, colorGreen)
         self.roga = roga
+
+    def eatgreen(self):
+        super().eatgreen()
+        print("this cow")
+
     def mushanie(self):
         pass
 
@@ -62,7 +67,24 @@ class Korova(Travoyad):
 ml = Mlekopit(12)
 tr = Travoyad(23, 'green')
 cow = Korova(5, 'yellow' , 2)
-# cow1 = Korova()
-# cow1.eatgreen()
+# cow = Korova()
+cow.eatgreen()
 
 # tr1 = Travoyad()
+
+
+class User:
+    def __init__(self, login, password) -> None:
+        self.login = login
+        self.password = password
+
+class UserProfile(User):
+    def __init__(self, login, password, email, address) -> None:
+        super().__init__(login, password)
+        self.email = email
+        self.address = address
+
+u = User("asdasd", "asdwqewqr")
+
+
+up = UserProfile("asdf", "asdwqwe", "1@com", "dnipro")
