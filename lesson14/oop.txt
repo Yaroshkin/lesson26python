@@ -1,0 +1,23 @@
+Car
+
+type
+KP
+motor
+
+move()
+signal()
+-------------------
+Mlekopit
+eatmilk() -> None
+
+Travoyad (Mlekopit)
+eatgreen()
+
+Korova (Travoyad)
+roga
+
+mushanie()
+eatmilk() -> 10l
+
+--------------------
+
