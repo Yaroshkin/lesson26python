@@ -44,18 +44,24 @@ class Mlekopit:
         pass
 
 class Travoyad(Mlekopit):
-    # def __init__(self, age):
-    #     super().__init__(age)
+    def __init__(self, age, colorGreen):
+        super().__init__(age)
+        self.colorGreen = colorGreen
+        
     def eatgreen(self):
         print("eat green")
 
 class Korova(Travoyad):
+    def __init__(self, age, colorGreen, roga):
+        super().__init__(age, colorGreen)
+        self.roga = roga
     def mushanie(self):
         pass
 
 
 ml = Mlekopit(12)
-tr = Travoyad(23)
+tr = Travoyad(23, 'green')
+cow = Korova(5, 'yellow' , 2)
 # cow1 = Korova()
 # cow1.eatgreen()
 
