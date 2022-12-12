@@ -33,8 +33,12 @@ class Circle(Figure):
         return 3.14 * (self.radius ** 2)
 
 class Elipse(Figure):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, radius_big, radius_small):
+        super().__init__("Elipse")
+        self.radius_big = radius_big
+        self.radius_small = radius_small
+    def areaFigure(self):
+        return 3.14 * self.radius_big * self.radius_small
 
 pl = Rectangle(4,5)
 pl.area()
@@ -44,3 +48,6 @@ sq.area()
 
 cr = Circle(3)
 cr.area()
+
+el = Elipse(6,2)
+el.area()
