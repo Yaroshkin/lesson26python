@@ -2,6 +2,9 @@
 # Реализовать методы вычисления площади
 
 
+enter_a = int(input("Введите сторону или радиус А: "))
+enter_b = int(input("Введите сторону или радиус Б: "))
+
 class Figure:
     def __init__(self, name ):
         self.name = name
@@ -40,14 +43,14 @@ class Elipse(Figure):
     def areaFigure(self):
         return 3.14 * self.radius_big * self.radius_small
 
-pl = Rectangle(4,5)
+pl = Rectangle(enter_a,enter_b)
 pl.area()
 
-sq = Square(4)
+sq = Square(enter_a)
 sq.area()
 
-cr = Circle(3)
+cr = Circle(enter_a)
 cr.area()
 
-el = Elipse(6,2)
+el = Elipse(enter_a,enter_b)
 el.area()
