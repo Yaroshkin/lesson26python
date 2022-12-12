@@ -8,19 +8,22 @@ class Figure:
     def areaFigure(self):
         return
     def area(self):
-        print(f"{self.name}, площадь {self.areaFigure}")
+        print(f"{self.name}, площадь {self.areaFigure()}")
 
 class Rectangle(Figure):
     def __init__(self, side_a, side_b):
-        super().__init__("Rectagle")
+        super().__init__("Rectangle")
         self.side_a = side_a
         self.side_b = side_b
     def areaFigure(self):
         return self.side_a * self.side_b
 
 class Square(Figure):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, side_a):
+        super().__init__("Square")
+        self.side_a = side_a
+    def areaFigure(self):
+        return self.side_a ** 2   
 
 class Circle(Figure):
     def __init__(self):
@@ -32,3 +35,6 @@ class Elipse(Figure):
 
 pl = Rectangle(4,5)
 pl.area()
+
+sq = Square(4)
+sq.area()
