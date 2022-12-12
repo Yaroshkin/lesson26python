@@ -26,8 +26,11 @@ class Square(Figure):
         return self.side_a ** 2   
 
 class Circle(Figure):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, radius):
+        super().__init__("Circle")
+        self.radius = radius
+    def areaFigure(self):
+        return 3.14 * (self.radius ** 2)
 
 class Elipse(Figure):
     def __init__(self):
@@ -38,3 +41,6 @@ pl.area()
 
 sq = Square(4)
 sq.area()
+
+cr = Circle(3)
+cr.area()
